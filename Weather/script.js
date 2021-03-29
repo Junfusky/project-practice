@@ -6,7 +6,6 @@ const apiKey = '856d2e9fb4821f934d7f4f931d8b9973';
 let cards = [];
 
 
-
 function buildCards(city, country, temp, weather, icon) {
     const newCard = document.createElement('li');
     newCard.classList.add('location');
@@ -83,9 +82,7 @@ form.addEventListener('submit', (e) => {
 });
 
 function fetchCards() {
-    if(localStorage = []) {
-        cardContainer.textContent = '';
-    }
+    cardContainer.textContent = '';
     if(localStorage.getItem('cards')) {
         cards = JSON.parse(localStorage.getItem('cards'));
         cards.forEach((card) => {
@@ -100,7 +97,7 @@ function fetchCards() {
 
 function deleteCard(city) {
     cards.forEach((card, i) => {
-        if (card.name === city) {
+        if (card.name == city) {
           cards.splice(i, 1);
         };
     });
